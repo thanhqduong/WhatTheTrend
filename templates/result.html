@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<h5>Check The Result!</h5>
+
+<p>The predict data are:</p>
+
+<p>{{data}}</p>
+
+<p>On the graph below, Blue are the entered values, Green are the Testing values, and Red are the predicted values.</p>
+
+<img src="{{ img }}"/>
+
+{% endblock %}

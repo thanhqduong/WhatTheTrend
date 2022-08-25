@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- plot decompose -->
+
+<h5>Identify Seasonal Trend</h5>
+
+<img src="{{ img }}"/>
+
+<form action="/details" method="POST">
+    Does the data follow any seasonal trend?
+    <br>
+    True
+    <input type="radio" name="repeat" value="1">
+    <br>
+    False
+    <input type="radio" name="repeat" value="0">
+    <br>
+    <br>
+    Number of elements per cycle (If False then enter any number)
+    <input type="number" name="num_repeat">
+    <br>
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+
+<h5>Split Train/Test</h5>
+
+<p>There are a total of {{length}} values. For the first text box, enter the number of training values (less than {{length}}).</p>
+
+<p>For the second text box, enter how many values you want to predict.</p>
+
+<form action="/result" method="POST">
+    <!-- How many -->
+    <input type="number" name="train_test">
+    <br>
+    <br>
+    <input type="number" name="predict">
+    <br>
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}

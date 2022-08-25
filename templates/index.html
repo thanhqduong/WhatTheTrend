@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<h5>Welcome to What The Trend!</h5>
+
+<h6>Analyze time-series and predict trends without writing codes.</h6>
+
+<p>On the first text box, enter your time-series data, separated by comma.</p>
+
+<p>On the second text box, enter the frequency of the time-series (yearly - Y, monthly - M, daily - D).</p>
+
+<p>The time-series data should be as twice as the number of a cycle at minimum.</p>
+
+<form action="/model_type" method="POST">
+    <input type="text" name="data" placeholder="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14">
+    <br>
+    <br>
+    <input type="text" name="freq" placeholder="Y or M or D">
+    <br>
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}

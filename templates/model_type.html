@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+
+<h5>Choose Model Type</h5>
+
+<!-- <h6>Intro</h6> -->
+
+<!-- plot data --> 
+
+<!-- <h6>Model Type</h6> -->
+
+<img src="{{ img }}"/>
+
+<p>Look at the graph above and choose the appropriate model.</p>
+
+<p>The additive model is useful when the seasonal variation is relatively constant over time.</p>
+
+<p>The multiplicative model is useful when the seasonal variation increases over time.</p>
+
+<p>More info <a href="https://online.stat.psu.edu/stat510/lesson/5/5.1">here</a>.</p>
+
+<form action="/seasonal" method="POST">
+    Additive
+    <input type="radio" name="type" value="additive">
+    <br>
+    Multiplicative
+    <input type="radio" name="type" value="multiplicative">
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}
